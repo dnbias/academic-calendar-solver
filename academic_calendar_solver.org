@@ -1,0 +1,70 @@
+:PROPERTIES:
+:ID:       be62ca6d-3866-47c2-a45c-0c34ba947c7c
+:END:
+#+title: Academic Calendar Solver
+#+date: [2024-07-23 Tue 20:23]
+#+filetags: :project:
+- Link:
+- Related: [[id:d85df405-73f0-4567-b8b4-d3e22f2aa7a7][IALAB]]
+* Objective
+- use the ASP paradigm
+- develop a CLINGO solver to an academic calendar problem
+* Constraints
+- lessons take place on Friday (8h) and Saturday (6h) remotely
+  + so there are no problems with room assignments
+- 24 weeks
+- the 7th and 16th weeks are full-time
+  + lessons Monday through Saturday
+- the same teacher cannot do more than 4h in a day
+- each teaching gets assigned minimum 2h and max 4h in a day
+- the first 2h of the first day are the master presentation
+- the calendar must allow for at least 6 free slots of 2h each for possible reschedules
+* Teachings
+| Name                                                                  | Teacher     | Hours |
+|-----------------------------------------------------------------------+-------------+-------|
+| Project Management                                                    | Muzzetto    |    14 |
+| Fondamenti di ICT e Paradigmi di Programmazione                       | Pozzato     |    14 |
+| Linguaggi di markup                                                   | Gena        |    20 |
+| La gestione delle qualita'                                            | Tomatis     |    10 |
+| Ambienti di sviluppo e linguaggi client-side per il web               | Micalizio   |    20 |
+| Progettazione grafica e disign di interfacce                          | Terranova   |    10 |
+| Progettazione di basi di dati                                         | Mazzei      |    20 |
+| Strumenti e metodi di interazione nei Social Media                    | Giordani    |    14 |
+| Acquisizione ed elaborazione di immagini statiche -grafica            | Zanchetta   |    14 |
+| Accessibilita' e usabilita' nella progettazione multimediale          | Gena        |    14 |
+| Marketing digitale                                                    | Muzzetto    |    10 |
+| Elementi di fotografia digitale                                       | Vargiu      |    10 |
+| Risorse digitali per il progetto: collaborazione e documentazione     | Boniolo     |    10 |
+| Tecnologie server-side per il web                                     | Damiano     |    20 |
+| Tecniche e strimunte di Marketing digitale                            | Zanchetta   |    10 |
+| Introduzione al socia media management                                | Suppini     |    14 |
+| Acquisizione ed elaborazione del suono                                | Valle       |    10 |
+| Acquisizione ed elaborazione di sequenze di immagini digitali         | Ghidelli    |    20 |
+| Comunicazione pubblicitaria e comunicazione pubblica                  | Gabardi     |    14 |
+| Semiologia e multimedialita'                                          | Santangelo  |    10 |
+| Crossmedia: articolazione delle scritture multimediali                | Taddeo      |    20 |
+| Grafica 3D                                                            | Gribaudo    |    20 |
+| Progettazione e sviluppo di applicazioni web su dispositivi mobili I  | Pozzato     |    10 |
+| Progettazione e sviluppo di applicazioni web su dispositivi mobili II | Schifanella |    10 |
+| La gestione delle risorse umane                                       | Lombardo    |    10 |
+| I vincoli giuridici del progetto: diritto dei media                   | Travostino  |    10 |
+
+- /Project Management/ must conclude before the first full-time week
+- the first lesson of /Accessibilita' e usabilita'/ must be placed before the conclusion of /Linguaggi di markup/
+- the distance between the start and end of any teaching cannot exceed 6 weeks
+- /Tecnologie server-side per il web/ has to be organized in 4h blocks
+- the first lessons of /Crossmedia/ and /Introduzione al social media management/ have to be placed in the 2nd full-time week
+** Prerequisites
+- last lesson of /left/ must precede first lesson of /right/:
+  + Fondamenti di ICT e Paradigmi -> Ambienti di sviluppo e linguaggi client-side per il web
+  + Ambienti di sviluppo e linguaggi client-side per il web -> Progettazione e sviluppo di applicazioni web su dispositivi mobile I
+  + Progettazione e sviluppo di applicazioni web su dispositivi mobile I -> Progettazione e sviluppo di applicazioni web su dispositivi mobile II
+  + Progettazione di basi di dati -> Tecnologie server-side per il web
+  + Linguaggi di markup -> Ambienti di sviluppo e linguaggi client-side per il web
+  + Project Management -> Marketing digitale
+  + Marketing digitale -> Tecniche e strumenti di Marketing digitale
+  + Project Management -> Strumenti e metodi di interazione nei social media
+  + Project Management -> Progettazione grafica e design di interfacce
+  + Acquisizione ed elaborazione di immagini statiche - grafica -> Elementi di fotografia digitale
+  + Elementi di fotografia digitale -> Acquisizione ed elaborazione di sequenze di immagini digitali
+  + Acquisizione ed elaborazione di immagini statiche - grafica -> Grafica 3D

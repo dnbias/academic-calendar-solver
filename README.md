@@ -21,7 +21,7 @@
 -   lessons take place on Friday (8h) and Saturday (6h) remotely
     -   so there are no problems with room assignments
 -   24 weeks
--   the 7th and 16th weeks are full-time
+-   the 7th and 16th weeks are full-time (8h except for Saturday with 6h)
     -   lessons Monday through Saturday
 -   the same teacher cannot do more than 4h in a day
 -   each teaching gets assigned minimum 2h and max 4h in a day

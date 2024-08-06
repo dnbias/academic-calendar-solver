@@ -1,7 +1,7 @@
 % clingo src file
 % an academic calendar solver
 
-week(1..24).
+week(1..16).
 day(mon;tue;wed;thu;fri;sat).
 hour(1..8).
 fulltime(7).
@@ -23,11 +23,11 @@ subject(pres;free;
 
 hoursOf(pres,2;free,12;
         pm,14;fictpp,14;lm,20;gq,10;aslcweb,20;
-        pgdi,10;pbd,20;smism,14;aeisg,14;aupm,14;md,10;efd,10;
-        rdp,10;tssweb,20;tsmd,10;ismm,14;aes,10;aesid,20;cpcp,14;
+        %% pgdi,10;pbd,20;smism,14;aeisg,14;aupm,14;md,10;efd,10;
+        %% rdp,10;tssweb,20;tsmd,10;ismm,14;aes,10;aesid,20;cpcp,14;
         semu,10;cmasm,20;g3d,20;psawm1,10;psawm2,10;gru,10;vgp,10).
 
-hoursCount(S,N):- subject(S), N = #count { W,D,H,S: assign(W,D,H,S), subject(S) }.
+hoursCount(S,N):- subject(S), N = #count { W,D,H,S: assign(W,D,H,S), subject(S) } >0.
 
 teaching(muzzetto,pm;muzzetto,md).
 teaching(pozzato,fictpp;pozzato,psawm1).
@@ -80,15 +80,15 @@ assign(1,fri,2,pres).
 % hours of teaching must be fullfilled
 :-S!=free, hoursCount(S,N), hoursOf(S,N1), N!=N1.
 :-S==free, hoursCount(S,N), hoursOf(S,N1), N<N1.
-% prerequisites must be respected TODO
+% prerequisites must be respected
 % last lesson of left-side must precede first lesson of right-side
 :-assign(W,D,H,S), assign(W1,D1,H1,S), assign(W2,D2,H2,S1),
   prerequisite(S,S1), W>=W1, D>=D1, H>=H1,
   W2<W, D2<D, H2<H.
-% distance between start and end of any teaching cannot exceed 6 weeks
-:-assign(W,D,H,S), assign(W1,D1,H1,S),
-  assign(W2,D2,H2,S), assign(W3,D3,H3,S),
-  W<=W1, D<=D1, H<=H1, W3>=W2, D3>=D2, H3>=H2, W3-W>=6.
+% distance between start and end of any teaching cannot exceed 6 weeks SLOW TODO
+%% :-assign(W,D,H,S), assign(W1,D1,H1,S),
+%%   assign(W2,D2,H2,S), assign(W3,D3,H3,S),
+%%   W<=W1, D<=D1, H<=H1, W3>=W2, D3>=D2, H3>=H2, W3-W>=6.
 % pm must conclude before 1st fulltime week
 :-assign(W,D,H,S), S==pm, fulltime(W1), W>=W1.
 % 1st lesson of ismm/cmasm placed in the 2nd fulltime week

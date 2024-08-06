@@ -52,7 +52,9 @@ teaching(schifanella,psawm2).
 teaching(lombardo,gru).
 teaching(travostino,vgp).
 
-prerequisite(fictpp,aslcweb).
+prerequisite(fictpp,aslcweb;aslcweb,psawm1;psawm1,psawm2;
+             pbd,tssweb;lm,aslcweb;pm,md;md,tsmd;pm,smism;
+             pm,pgdi;aeisg,efd;efd,aesid;aeisg,g3d).
 
 % presentation is first hours of the course
 assign(1,fri,1,pres).

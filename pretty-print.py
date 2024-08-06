@@ -3,7 +3,6 @@ import re
 import sys
 import fileinput
 import itertools
-from tabulate import tabulate
 from enum import StrEnum, auto
 
 name_of_script = sys.argv[0]
@@ -75,7 +74,6 @@ def pprint(clingo_str):
                 a.day = Day(args[1])
                 a.hour = args[2]
                 a.sub = args[3]
-            # updateCalendar(a)
             calendar.append(a)
         elif 'hoursCount' in token:
             m = re.search(r"\(([A-Za-z0-9,_]+)\)", token)
@@ -104,9 +102,8 @@ def pprint(clingo_str):
     print('End week:')
     for e in ends:
         print(e)
-    print()
 
-    calendar.sort(key=lambda x: (x.week, x.day, x.hour))
+    calendar.sort(key=lambda x: (int(x.week), x.day, int(x.hour)))
     key_fun = lambda x: x.week
     weeks_calendar = [list(group) for key, group in itertools.groupby(calendar, key_fun)]
 
@@ -117,19 +114,10 @@ def pprint(clingo_str):
         print(f'week {w[0].week}')
 
         for d in days_calendar:
-            d.sort(key=lambda x: (x.day, x.hour))
+            d.sort(key=lambda x: (x.day, int(x.hour)))
             print()
             print(d[0].day)
             for attr in ('hour', 'sub'):
                 print(' '.join('%-8s'%getattr(item, attr) for item in d))
-
-
-
-        # tab = tabulate(w, headers[""])
-        # print(tab)
-        # key_fun = lambda x: x.day
-        # days = [list(group) for key, group in itertools.groupby(w, key_fun)]
-        # for d in days:
-        # print(f'{d[0].day}')
 
 pprint(input)

@@ -13,6 +13,8 @@ for line in fileinput.input(encoding="utf-8"):
 
 calendar = []
 hoursCount = []
+starts = []
+ends = []
 
 class Day(StrEnum):
     MON = auto()
@@ -66,21 +68,43 @@ def pprint(clingo_str):
     for token in tokens:
         if 'assign' in token:
             m = re.search(r"\(([A-Za-z0-9,_]+)\)", token)
-            args = m.group(1).split(',')
-            a = Assignment()
-            a.week = args[0]
-            a.day = Day(args[1])
-            a.hour = args[2]
-            a.sub = args[3]
+            if m:
+                args = m.group(1).split(',')
+                a = Assignment()
+                a.week = args[0]
+                a.day = Day(args[1])
+                a.hour = args[2]
+                a.sub = args[3]
             # updateCalendar(a)
             calendar.append(a)
         elif 'hoursCount' in token:
             m = re.search(r"\(([A-Za-z0-9,_]+)\)", token)
-            args = m.group(1).split(',')
-            hoursCount.append(f"{args[0]}:{args[1]}")
+            if m:
+                args = m.group(1).split(',')
+                hoursCount.append(f"{args[0]}:{args[1]}")
+        elif 'start' in token:
+            m = re.search(r"\(([A-Za-z0-9,_]+)\)", token)
+            if m:
+                args = m.group(1).split(',')
+                starts.append(f"{args[0]}:{args[1]}")
+        elif 'end' in token:
+            m = re.search(r"\(([A-Za-z0-9,_]+)\)", token)
+            if m:
+                args = m.group(1).split(',')
+                ends.append(f"{args[0]}:{args[1]}")
 
+    print('Hours counted:')
     for h in hoursCount:
         print(h)
+    print('-------------------------------------------------------------------------')
+    print('Starting week:')
+    for s in starts:
+        print(s)
+    print('-------------------------------------------------------------------------')
+    print('End week:')
+    for e in ends:
+        print(e)
+    print()
 
     calendar.sort(key=lambda x: (x.week, x.day, x.hour))
     key_fun = lambda x: x.week

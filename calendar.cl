@@ -22,7 +22,7 @@ subject(pres;free;
         semu;cmasm;g3d;psawm1;psawm2;gru;vgp).
 
 hoursOf(pres,2;free,12;
-        pm,14;fictpp,14;lm,20;gq,10;aslcweb,20;
+        %% pm,14;fictpp,14;lm,20;gq,10;aslcweb,20;
         %% pgdi,10;pbd,20;smism,14;aeisg,14;aupm,14;md,10;efd,10;
         %% rdp,10;tssweb,20;tsmd,10;ismm,14;aes,10;aesid,20;cpcp,14;
         semu,10;cmasm,20;g3d,20;psawm1,10;psawm2,10;gru,10;vgp,10).
@@ -56,6 +56,9 @@ prerequisite(fictpp,aslcweb;aslcweb,psawm1;psawm1,psawm2;
              pbd,tssweb;lm,aslcweb;pm,md;md,tsmd;pm,smism;
              pm,pgdi;aeisg,efd;efd,aesid;aeisg,g3d).
 
+start(S,WS):-subject(S), hoursOf(S,N), N>0, WS = #min { W: assign(W,D,H,S), subject(S) } > 0.
+end(S,WE):-subject(S), hoursOf(S,N), N>0, WE = #max { W: assign(W,D,H,S), subject(S) } < 25.
+
 % presentation is first hours of the course
 assign(1,fri,1,pres).
 assign(1,fri,2,pres).
@@ -85,16 +88,14 @@ assign(1,fri,2,pres).
 :-assign(W,D,H,S), assign(W1,D1,H1,S), assign(W2,D2,H2,S1),
   prerequisite(S,S1), W>=W1, D>=D1, H>=H1,
   W2<W, D2<D, H2<H.
-% distance between start and end of any teaching cannot exceed 6 weeks SLOW TODO
-%% :-assign(W,D,H,S), assign(W1,D1,H1,S),
-%%   assign(W2,D2,H2,S), assign(W3,D3,H3,S),
-%%   W<=W1, D<=D1, H<=H1, W3>=W2, D3>=D2, H3>=H2, W3-W>=6.
+% distance between start and end of any teaching cannot exceed 6 weeks
+:-assign(W,D,H,S), start(S,WS), end(S,WE), WS!=#sup, WE!=#inf, WS>0, WE<25, WE-WS>6.
 % pm must conclude before 1st fulltime week
 :-assign(W,D,H,S), S==pm, fulltime(W1), W>=W1.
 % 1st lesson of ismm/cmasm placed in the 2nd fulltime week
-:-assign(W,D,H,S), assign(WN,DN,HN,S), S==ismm, W<=WN, D<=DN, H<HN,
+:-S==ismm, start(S,W),
   fulltime(W1), fulltime(W2), W1<W2, W!=W2.
-:-assign(W,D,H,S), assign(WN,DN,HN,S), S==cmasm, W<=WN, D<=DN, H<HN,
+:-S==cmasm, start(S,W),
   fulltime(W1), fulltime(W2), W1<W2, W!=W2.
 % 1st lesson of aupm before last lesson of lm
 :-assign(W,D,H,S), assign(W1,D1,H1,S), S==aupm,
@@ -107,3 +108,5 @@ assign(1,fri,2,pres).
 
 #show assign/4.
 #show hoursCount/2.
+#show start/2.
+#show end/2.

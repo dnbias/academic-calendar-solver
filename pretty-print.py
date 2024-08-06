@@ -58,7 +58,10 @@ class Assignment(metaclass=MetaAssignment):
     sub = ''
 
 def pprint(clingo_str):
-    # print(clingo_str)
+    file = open('clingo.log', 'w')
+    file.write(clingo_str)
+    file.close()
+
     tokens = clingo_str.split()
     for token in tokens:
         if 'assign' in token:
@@ -86,7 +89,7 @@ def pprint(clingo_str):
     for w in weeks_calendar:
         key_fun = lambda x: x.day
         days_calendar = [list(group) for key, group in itertools.groupby(w, key_fun)]
-        print('----------------------------------------------------------------------')
+        print('-------------------------------------------------------------------------')
         print(f'week {w[0].week}')
 
         for d in days_calendar:

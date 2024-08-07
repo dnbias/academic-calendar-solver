@@ -57,15 +57,17 @@ prerequisite(fictpp,aslcweb;aslcweb,psawm1;psawm1,psawm2;
              pm,pgdi;aeisg,efd;efd,aesid;aeisg,g3d).
 
 hoursCount(S,N):- subject(S), N = #count { W,D,H,S: assign(W,D,H,S), subject(S) }.
+
 hoursInDay(W,D,S,N):- subject(S), week(W), day(D),
                       N = #count { H: assign(W,D,H,S), subject(S), week(W), day(D) }.
+
 start(S,WS):-subject(S), hoursOf(S,N), N>0, WS = #min { W: assign(W,D,H,S), subject(S) }.
+
 end(S,WE):-subject(S), hoursOf(S,N), N>0, WE = #max { W: assign(W,D,H,S), subject(S) }.
 
 % presentation is first hours of the course
 assign(1,fri,1,pres).
 assign(1,fri,2,pres).
-
 
 % assign each slot a subject
 1 { assign(W,D,H,S): subject(S) } 1:-week(W),day(D),hour(H),
@@ -91,11 +93,10 @@ assign(1,fri,2,pres).
 :-S!=free, hoursCount(S,N), hoursOf(S,N1), N!=N1.
 :-S==free, hoursCount(S,N), hoursOf(S,N1), N<N1.
 % prerequisites must be respected
-% last lesson of left-side must precede first lesson of right-side
-:-assign(W,D,H,S), assign(W1,D1,H1,S), assign(W2,D2,H2,S1),
-  end(S,W), start(S1,W2), prerequisite(S,S1),
-  W>=W1, D>=D1, H>=H1,
-  W2<W.
+% last lesson of left-side must precede first lesson of right-side TODO
+:-prerequisite(S,S1), end(S,W), start(S1,W1), W1<W.
+:-prerequisite(S,S1), end(S,W), start(S1,W1), W1==W,
+  assign(W,D,H,S), assign(W1,D1,H1,S1), D>=D1.
 % distance between start and end of any teaching cannot exceed 6 weeks
 :-S!=free, start(S,WS), end(S,WE),
   WS>0, WE<25, WE-WS>6.

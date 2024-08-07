@@ -30,332 +30,332 @@ vgp:10
 -------------------------------------------------------------------------
 Starting week:
 pres:1
-free:1
-pm:2
-fictpp:2
-lm:11
-gq:10
-aslcweb:17
-pgdi:2
-pbd:18
-smism:20
+free:5
+pm:4
+fictpp:4
+lm:1
+gq:7
+aslcweb:11
+pgdi:7
+pbd:13
+smism:17
 aeisg:1
-aupm:18
-md:18
-efd:13
-rdp:13
-tssweb:1
-tsmd:16
+aupm:6
+md:7
+efd:3
+rdp:11
+tssweb:20
+tsmd:12
 ismm:16
-aes:15
-aesid:4
-cpcp:6
-semu:7
+aes:11
+aesid:21
+cpcp:3
+semu:6
 cmasm:16
 g3d:7
-psawm1:6
-psawm2:7
-gru:17
-vgp:4
+psawm1:17
+psawm2:19
+gru:7
+vgp:5
 -------------------------------------------------------------------------
 End week:
 pres:1
 free:24
 pm:6
-fictpp:8
-lm:17
-gq:13
-aslcweb:22
-pgdi:8
-pbd:24
-smism:22
-aeisg:7
-aupm:24
-md:24
-efd:19
-rdp:19
-tssweb:7
-tsmd:21
-ismm:16
-aes:21
-aesid:10
-cpcp:12
-semu:13
-cmasm:17
-g3d:12
-psawm1:12
-psawm2:9
-gru:23
-vgp:7
+fictpp:7
+lm:3
+gq:10
+aslcweb:15
+pgdi:11
+pbd:19
+smism:23
+aeisg:2
+aupm:12
+md:10
+efd:7
+rdp:17
+tssweb:24
+tsmd:17
+ismm:19
+aes:17
+aesid:24
+cpcp:9
+semu:9
+cmasm:22
+g3d:13
+psawm1:18
+psawm2:22
+gru:13
+vgp:11
 -------------------------------------------------------------------------
 week 1
 
 fri
 1        2        3        4        5        6        7        8       
-pres     pres     free     free     tssweb   tssweb   tssweb   tssweb  
+pres     pres     lm       lm       aeisg    aeisg    aeisg    aeisg   
 
 sat
 1        2        3        4        5        6       
-aeisg    aeisg    tssweb   tssweb   tssweb   tssweb  
+lm       lm       aeisg    aeisg    aeisg    aeisg   
 -------------------------------------------------------------------------
 week 2
 
 fri
 1        2        3        4        5        6        7        8       
-aeisg    aeisg    pm       pm       pgdi     pgdi     pgdi     pgdi    
+lm       lm       aeisg    aeisg    lm       lm       aeisg    aeisg   
 
 sat
 1        2        3        4        5        6       
-fictpp   fictpp   fictpp   fictpp   aeisg    aeisg   
+lm       lm       lm       lm       aeisg    aeisg   
 -------------------------------------------------------------------------
 week 3
 
 fri
 1        2        3        4        5        6        7        8       
-pm       pm       aeisg    aeisg    tssweb   tssweb   tssweb   tssweb  
+lm       lm       efd      efd      cpcp     cpcp     lm       lm      
 
 sat
 1        2        3        4        5        6       
-pm       pm       free     free     fictpp   fictpp  
+efd      efd      lm       lm       lm       lm      
 -------------------------------------------------------------------------
 week 4
 
 fri
 1        2        3        4        5        6        7        8       
-fictpp   fictpp   vgp      vgp      aeisg    aeisg    aesid    aesid   
+fictpp   fictpp   fictpp   fictpp   pm       pm       pm       pm      
 
 sat
 1        2        3        4        5        6       
-aesid    aesid    aeisg    aeisg    vgp      vgp     
+fictpp   fictpp   fictpp   fictpp   pm       pm      
 -------------------------------------------------------------------------
 week 5
 
 fri
 1        2        3        4        5        6        7        8       
-fictpp   fictpp   free     free     pm       pm       pm       pm      
+pm       pm       vgp      vgp      free     free     free     free    
 
 sat
 1        2        3        4        5        6       
-pm       pm       free     free     aesid    aesid   
+pm       pm       cpcp     cpcp     fictpp   fictpp  
 -------------------------------------------------------------------------
 week 6
 
 fri
 1        2        3        4        5        6        7        8       
-fictpp   fictpp   free     free     pm       pm       psawm1   psawm1  
+semu     semu     cpcp     cpcp     aupm     aupm     pm       pm      
 
 sat
 1        2        3        4        5        6       
-cpcp     cpcp     tssweb   tssweb   tssweb   tssweb  
+fictpp   fictpp   vgp      vgp      pm       pm      
 -------------------------------------------------------------------------
 week 7
 
 mon
 1        2        3        4        5        6        7        8       
-free     free     semu     semu     psawm2   psawm2   aesid    aesid   
+semu     semu     cpcp     cpcp     pgdi     pgdi     cpcp     cpcp    
 
 tue
 1        2        3        4        5        6        7        8       
-g3d      g3d      aeisg    aeisg    aesid    aesid    aesid    aesid   
+semu     semu     md       md       fictpp   fictpp   gq       gq      
 
 wed
 1        2        3        4        5        6        7        8       
-g3d      g3d      aesid    aesid    tssweb   tssweb   tssweb   tssweb  
+efd      efd      efd      efd      g3d      g3d      md       md      
 
 thu
 1        2        3        4        5        6        7        8       
-g3d      g3d      free     free     psawm1   psawm1   g3d      g3d     
+gru      gru      md       md       semu     semu     efd      efd     
 
 fri
 1        2        3        4        5        6        7        8       
-vgp      vgp      vgp      vgp      psawm2   psawm2   psawm1   psawm1  
+gq       gq       aupm     aupm     g3d      g3d      g3d      g3d     
 
 sat
 1        2        3        4        5        6       
-vgp      vgp      cpcp     cpcp     g3d      g3d     
+aupm     aupm     gru      gru      aupm     aupm    
 -------------------------------------------------------------------------
 week 8
 
 fri
 1        2        3        4        5        6        7        8       
-pgdi     pgdi     pgdi     pgdi     fictpp   fictpp   aesid    aesid   
+free     free     cpcp     cpcp     aupm     aupm     pgdi     pgdi    
 
 sat
 1        2        3        4        5        6       
-pgdi     pgdi     cpcp     cpcp     g3d      g3d     
+free     free     aupm     aupm     gq       gq      
 -------------------------------------------------------------------------
 week 9
 
 fri
 1        2        3        4        5        6        7        8       
-free     free     g3d      g3d      psawm2   psawm2   psawm2   psawm2  
+cpcp     cpcp     pgdi     pgdi     g3d      g3d      g3d      g3d     
 
 sat
 1        2        3        4        5        6       
-psawm2   psawm2   cpcp     cpcp     cpcp     cpcp    
+gq       gq       md       md       semu     semu    
 -------------------------------------------------------------------------
 week 10
 
 fri
 1        2        3        4        5        6        7        8       
-semu     semu     semu     semu     gq       gq       aesid    aesid   
+md       md       gq       gq       gru      gru      vgp      vgp     
 
 sat
 1        2        3        4        5        6       
-g3d      g3d      semu     semu     aesid    aesid   
+g3d      g3d      pgdi     pgdi     vgp      vgp     
 -------------------------------------------------------------------------
 week 11
 
 fri
 1        2        3        4        5        6        7        8       
-lm       lm       free     free     gq       gq       psawm1   psawm1  
+rdp      rdp      pgdi     pgdi     free     free     vgp      vgp     
 
 sat
 1        2        3        4        5        6       
-lm       lm       gq       gq       cpcp     cpcp    
+aes      aes      aslcweb  aslcweb  aslcweb  aslcweb 
 -------------------------------------------------------------------------
 week 12
 
 fri
 1        2        3        4        5        6        7        8       
-lm       lm       g3d      g3d      gq       gq       free     free    
+free     free     aupm     aupm     tsmd     tsmd     g3d      g3d     
 
 sat
 1        2        3        4        5        6       
-cpcp     cpcp     psawm1   psawm1   g3d      g3d     
+g3d      g3d      g3d      g3d      gru      gru     
 -------------------------------------------------------------------------
 week 13
 
 fri
 1        2        3        4        5        6        7        8       
-lm       lm       semu     semu     gq       gq       free     free    
+gru      gru      aslcweb  aslcweb  g3d      g3d      tsmd     tsmd    
 
 sat
 1        2        3        4        5        6       
-lm       lm       efd      efd      rdp      rdp     
+tsmd     tsmd     pbd      pbd      aslcweb  aslcweb 
 -------------------------------------------------------------------------
 week 14
 
 fri
 1        2        3        4        5        6        7        8       
-lm       lm       rdp      rdp      rdp      rdp      efd      efd     
+free     free     aslcweb  aslcweb  pbd      pbd      aslcweb  aslcweb 
 
 sat
 1        2        3        4        5        6       
-lm       lm       rdp      rdp      free     free    
+pbd      pbd      aslcweb  aslcweb  aslcweb  aslcweb 
 -------------------------------------------------------------------------
 week 15
 
 fri
 1        2        3        4        5        6        7        8       
-lm       lm       efd      efd      aes      aes      efd      efd     
+pbd      pbd      aslcweb  aslcweb  aes      aes      aslcweb  aslcweb 
 
 sat
 1        2        3        4        5        6       
-lm       lm       aes      aes      free     free    
+aes      aes      pbd      pbd      free     free    
 -------------------------------------------------------------------------
 week 16
 
 mon
 1        2        3        4        5        6        7        8       
-free     free     aes      aes      cmasm    cmasm    tsmd     tsmd    
+ismm     ismm     cmasm    cmasm    cmasm    cmasm    rdp      rdp     
 
 tue
 1        2        3        4        5        6        7        8       
-cmasm    cmasm    ismm     ismm     cmasm    cmasm    ismm     ismm    
+free     free     pbd      pbd      free     free     cmasm    cmasm   
 
 wed
 1        2        3        4        5        6        7        8       
-free     free     cmasm    cmasm    cmasm    cmasm    tsmd     tsmd    
+free     free     cmasm    cmasm    free     free     free     free    
 
 thu
 1        2        3        4        5        6        7        8       
-free     free     ismm     ismm     ismm     ismm     cmasm    cmasm   
+rdp      rdp      cmasm    cmasm    pbd      pbd      tsmd     tsmd    
 
 fri
 1        2        3        4        5        6        7        8       
-cmasm    cmasm    cmasm    cmasm    ismm     ismm     ismm     ismm    
+ismm     ismm     ismm     ismm     aes      aes      pbd      pbd     
 
 sat
 1        2        3        4        5        6       
-cmasm    cmasm    ismm     ismm     tsmd     tsmd    
+ismm     ismm     rdp      rdp      free     free    
 -------------------------------------------------------------------------
 week 17
 
 fri
 1        2        3        4        5        6        7        8       
-aslcweb  aslcweb  aslcweb  aslcweb  gru      gru      cmasm    cmasm   
+ismm     ismm     tsmd     tsmd     rdp      rdp      psawm1   psawm1  
 
 sat
 1        2        3        4        5        6       
-aslcweb  aslcweb  lm       lm       aslcweb  aslcweb 
+smism    smism    aes      aes      smism    smism   
 -------------------------------------------------------------------------
 week 18
 
 fri
 1        2        3        4        5        6        7        8       
-md       md       pbd      pbd      pbd      pbd      tsmd     tsmd    
+psawm1   psawm1   cmasm    cmasm    psawm1   psawm1   ismm     ismm    
 
 sat
 1        2        3        4        5        6       
-aes      aes      aupm     aupm     gru      gru     
+psawm1   psawm1   psawm1   psawm1   smism    smism   
 -------------------------------------------------------------------------
 week 19
 
 fri
 1        2        3        4        5        6        7        8       
-rdp      rdp      aupm     aupm     md       md       md       md      
+smism    smism    ismm     ismm     psawm2   psawm2   smism    smism   
 
 sat
 1        2        3        4        5        6       
-aupm     aupm     aupm     aupm     efd      efd     
+pbd      pbd      cmasm    cmasm    pbd      pbd     
 -------------------------------------------------------------------------
 week 20
 
 fri
 1        2        3        4        5        6        7        8       
-aslcweb  aslcweb  free     free     smism    smism    md       md      
+psawm2   psawm2   psawm2   psawm2   tssweb   tssweb   tssweb   tssweb  
 
 sat
 1        2        3        4        5        6       
-smism    smism    pbd      pbd      smism    smism   
+cmasm    cmasm    cmasm    cmasm    free     free    
 -------------------------------------------------------------------------
 week 21
 
 fri
 1        2        3        4        5        6        7        8       
-aes      aes      aslcweb  aslcweb  aupm     aupm     aslcweb  aslcweb 
+aesid    aesid    free     free     tssweb   tssweb   tssweb   tssweb  
 
 sat
 1        2        3        4        5        6       
-aslcweb  aslcweb  tsmd     tsmd     aslcweb  aslcweb 
+smism    smism    tssweb   tssweb   tssweb   tssweb  
 -------------------------------------------------------------------------
 week 22
 
 fri
 1        2        3        4        5        6        7        8       
-gru      gru      aupm     aupm     smism    smism    smism    smism   
+aesid    aesid    aesid    aesid    cmasm    cmasm    psawm2   psawm2  
 
 sat
 1        2        3        4        5        6       
-smism    smism    smism    smism    aslcweb  aslcweb 
+psawm2   psawm2   aesid    aesid    aesid    aesid   
 -------------------------------------------------------------------------
 week 23
 
 fri
 1        2        3        4        5        6        7        8       
-pbd      pbd      gru      gru      gru      gru      pbd      pbd     
+free     free     aesid    aesid    tssweb   tssweb   tssweb   tssweb  
 
 sat
 1        2        3        4        5        6       
-pbd      pbd      pbd      pbd      free     free    
+aesid    aesid    aesid    aesid    smism    smism   
 -------------------------------------------------------------------------
 week 24
 
 fri
 1        2        3        4        5        6        7        8       
-aupm     aupm     md       md       pbd      pbd      free     free    
+free     free     free     free     tssweb   tssweb   tssweb   tssweb  
 
 sat
 1        2        3        4        5        6       
-pbd      pbd      pbd      pbd      free     free    
+aesid    aesid    aesid    aesid    free     free    

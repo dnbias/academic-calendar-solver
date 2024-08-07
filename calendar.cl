@@ -78,8 +78,6 @@ assign(1,fri,2,pres).
   hoursInDay(W,D,S,N), N<4.
 :-S==tssweb, assign(W,D,H,S), assign(W,D,H+2,S1),
   S!=S1.
-
-%%   H\2==1, |H-H2|!=3.
 % max 2 slots per teacher per day
 :-assign(W,D,H,S), assign(W,D,H1,S1), assign(W,D,H2,S2),
   teaching(T,S), teaching(T,S1), teaching(T,S2),
@@ -95,8 +93,9 @@ assign(1,fri,2,pres).
 % prerequisites must be respected
 % last lesson of left-side must precede first lesson of right-side
 :-assign(W,D,H,S), assign(W1,D1,H1,S), assign(W2,D2,H2,S1),
-  prerequisite(S,S1), W>=W1, D>=D1, H>=H1,
-  W2<W, D2<D, H2<H.
+  end(S,W), start(S1,W2), prerequisite(S,S1),
+  W>=W1, D>=D1, H>=H1,
+  W2<W.
 % distance between start and end of any teaching cannot exceed 6 weeks
 :-S!=free, start(S,WS), end(S,WE),
   WS>0, WE<25, WE-WS>6.
